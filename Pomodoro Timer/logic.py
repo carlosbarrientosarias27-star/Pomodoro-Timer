@@ -2,9 +2,11 @@ import time
 import sys
 import threading
 import os
+
 # Importaciones desde la subcarpeta utils
 from utils.interface import clear_screen, progress_bar
 from utils.notifications import play_beep
+from pynput import keyboard 
 
 class PomodoroApp:
     """Controla la lógica de ejecución, hilos y estados del temporizador."""
@@ -91,12 +93,20 @@ class PomodoroApp:
 
     def listen_keys(self):
         """
-        Escucha las pulsaciones de teclado en un hilo separado para controlar la ejecución.
+        Escucha las pulsaciones de teclado de forma asíncrona.
         """
-        while self.running:
-            cmd = input().strip().lower() 
-            if cmd == 'p':
-                self.paused = not self.paused
-            elif cmd == 'q':
-                self.running = False
-                os._exit(0)
+        def on_press(key):
+            try:
+                # Comprobamos caracteres alfanuméricos
+                if hasattr(key, 'char'):
+                    if key.char == 'p':
+                        self.paused = not self.paused
+                    elif key.char == 'q':
+                        self.running = False
+                        return False  # Detiene el listener de pynput
+            except Exception:
+                pass
+
+        # El listener se ejecuta en su propio hilo
+        with keyboard.Listener(on_press=on_press) as listener:
+            listener.join()
