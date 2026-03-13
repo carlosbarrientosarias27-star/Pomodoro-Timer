@@ -6,33 +6,19 @@
 
 ## 📋 Tabla de Contenidos
 
-📋 Tabla de Contenidos
-Pomodoro Timer
-
-Descripción
-
-Estructura del proyecto
-
-Módulos principales
-
-Tests
-
-Documentación técnica
-
-Instalación y uso
-
-Proyecto de Prueba
-
-Descripción
-
-Estructura
-
-Uso
-
-Requisitos generales
-
-Licencia
-
+- [Pomodoro Timer](#pomodoro-timer)
+  - [Descripción](#descripción)
+  - [Estructura del proyecto](#estructura-del-proyecto)
+  - [Módulos principales](#módulos-principales)
+  - [Tests](#tests)
+  - [Documentación técnica](#documentación-técnica)
+  - [Instalación y uso](#instalación-y-uso)
+- [Proyecto de Prueba](#proyecto-de-prueba)
+  - [Descripción](#descripción-1)
+  - [Estructura](#estructura)
+  - [Uso](#uso)
+- [Requisitos generales](#requisitos-generales)
+- [Licencia](#licencia)
 ---
 
 # 🍅 Pomodoro Timer
