@@ -4,15 +4,15 @@ Este documento detalla el uso de herramientas de Inteligencia Artificial para el
 ## 1. Contexto del Proyecto
 El Pomodoro Timer es una aplicación modular escrita en Python. Para que la IA brinde respuestas precisas, es crucial proporcionarle la estructura actual:
 
-main.py: Punto de entrada de la aplicación.
+- main.py: Punto de entrada de la aplicación.
 
-logic.py: Motor de tiempos y estados del Pomodoro.
+- logic.py: Motor de tiempos y estados del Pomodoro.
 
-interface.py: Manejo de la UI (User Interface).
+- interface.py: Manejo de la UI (User Interface).
 
-notifications.py: Sistema de alertas y sonidos.
+- notifications.py: Sistema de alertas y sonidos.
 
-utils/: Funciones auxiliares de configuración y sistema.
+- utils/: Funciones auxiliares de configuración y sistema.
 
 ## 2. Cómo Solicitar Asistencia
 Al interactuar con una IA para este proyecto, se recomienda usar el siguiente formato de Prompt:
