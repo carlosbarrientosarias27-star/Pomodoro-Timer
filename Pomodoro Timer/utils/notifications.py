@@ -3,8 +3,10 @@ import sys
 
 def play_beep():
     """
-    Emite una alerta sonora. Utiliza winsound en Windows y el carácter de campana 
-    de sistema (\a) en sistemas Unix/macOS.
+    Emite una alerta sonora multiplataforma.
+    
+    Usa winsound en Windows y el carácter de campana de sistema (\a) 
+    en sistemas Unix/macOS.
     """
     system = platform.system()
     try:

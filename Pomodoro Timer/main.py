@@ -3,8 +3,10 @@ from logic import PomodoroApp
 
 if __name__ == "__main__":
     """
-    Punto de entrada principal del programa. 
-    Instancia la configuración e inicia la aplicación.
+    Punto de entrada de la aplicación.
+    
+    Instancia la configuración global e inicia el flujo principal 
+    de la aplicación Pomodoro.
     """
     config = Config()
     app = PomodoroApp(config)

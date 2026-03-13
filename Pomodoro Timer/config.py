@@ -1,20 +1,41 @@
 class Config:
-    """Maneja las variables configurables del temporizador."""
+    """
+    Maneja las variables de configuración y validación del temporizador Pomodoro.
+    """
     def __init__(self):
-        """Inicializa los valores por defecto para las sesiones de Pomodoro."""
-        self.work_min = 25
+        """Inicializa los valores por defecto para el flujo de trabajo."""
+        self._work_min = 25
         self.short_break_min = 5
         self.long_break_min = 15
         self.total_cycles = 4
 
-    def validate_positive(self, val):
+    @property
+    def work_min(self):
+        """Obtiene el valor actual de los minutos de trabajo."""
+        return self._work_min
+
+    @work_min.setter
+    def work_min(self, value):
         """
-        Valida que un valor numérico sea estrictamente positivo.
+        Establece los minutos de trabajo validando que el valor sea positivo.
         
         Args:
-            val (int/float): El valor a validar.
-            
-        Returns:
-            bool: True si es mayor a cero, False en caso contrario.
+            value (int): Minutos a asignar.
+        Raises:
+            ValueError: Si el valor es menor o igual a cero.
         """
-        return val > 0
+        if value > 0:
+            self._work_min = value
+        else:
+            raise ValueError("El tiempo debe ser mayor a 0")
+            
+    def validate_positive(self, val):
+        """
+        Verifica si un valor es un número positivo.
+        
+        Args:
+            val: Valor a validar.
+        Returns:
+            bool: True si es un número mayor a cero, False en caso contrario.
+        """
+        return isinstance(val, (int, float)) and val > 0
