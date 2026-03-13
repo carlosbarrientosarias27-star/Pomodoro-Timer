@@ -27,7 +27,8 @@ Para nuevas funciones: "Quiero añadir un contador de ciclos completados en logi
 ## 3. Guía de Uso del Temporizador (Ejemplos)
 Para documentar el uso técnico, aquí tienes ejemplos de cómo se invocan las funciones principales:
 
-Inicio de una sesión estándar
+- Inicio de una sesión estándar
+
 Python
 from logic import PomodoroLogic
 
@@ -35,7 +36,8 @@ from logic import PomodoroLogic
 
 timer = PomodoroLogic(work_time=25, break_time=5)
 timer.start()
-Configuración personalizada
+
+- Configuración personalizada
 Si se desea modificar los parámetros desde config.py:
 
 Python
