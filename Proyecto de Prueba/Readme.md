@@ -1,0 +1,2 @@
+# Proyecto de Prueba de Piedra_Papel_Tijera
+En el archivo Pomodoro.py tengo todo el código para luego organizarlo separando reponsabilidades (SRP) en diferentes archivos y carpetas. Luego estructurando el proyecto en carpetas.
