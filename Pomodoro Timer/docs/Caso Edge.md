@@ -1,5 +1,9 @@
 # 1. Evaluación de Casos de Borde
 Basado en el código actual, aquí están los puntos críticos detectados: 
 
-🟢 Pruebas de Casos de Borde (Edge Cases)
-EscenarioComportamiento ActualRiesgo / ResultadoSugerencia de Mejora0 CiclosEl bucle while en start() no se ejecuta.La aplicación finaliza inmediatamente sin feedback.Validar que total_cycles sea $> 0$ antes de iniciar.Valores Negativoscountdown recibe minutos negativos.El bucle while seconds > 0 se salta y el ciclo termina al instante.Usar validate_positive() de Config antes de asignar valores.Valores GigantesAcepta cualquier entero (ej. $10^6$ min).Riesgo de desbordamiento visual en la barra de progreso o sesiones irreales.Establecer un límite máximo razonable (ej. 120 min).Input No NuméricoCapturado por bloque try-except en start().Usa valores por defecto sin notificar cuál entrada falló.Indicar específicamente qué valor fue invalidado al usuario.Entrada VacíaUsa el operador or para asignar valores por defecto.Correcto. Implementación limpia para una experiencia de usuario ágil.Mantener como funcionalidad de "configuración rápida
+Escenario,Comportamiento Actual,Riesgo / Resultado,Sugerencia de Mejora
+0 Ciclos,El bucle while en start() no se ejecuta.,La aplicación finaliza inmediatamente sin feedback.,Validar que total_cycles > 0 antes de iniciar.
+Valores Negativos,countdown recibe minutos negativos.,El bucle while seconds > 0 se omite; el ciclo termina al instante.,Usar validate_positive() antes de asignar valores.
+Valores Gigantes,Acepta cualquier entero (ej. 106 min).,Desbordamiento visual en la barra de progreso o sesiones irreales.,Establecer un límite máximo razonable (ej. 120 min).
+Input No Numérico,Capturado por bloque try-except en start().,Usa valores por defecto sin notificar cuál entrada falló.,Indicar específicamente qué valor fue invalidado al usuario.
+Entrada Vacía,Usa el operador or para asignar valores por defecto.,Correcto. Implementación limpia para UX ágil.,"Mantener como funcionalidad de ""configuración rápida""."
