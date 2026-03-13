@@ -56,15 +56,20 @@ class PomodoroApp:
             play_beep()
 
     def start(self):
-        """
-        Inicia el ciclo de vida de la aplicación, solicita inputs y gestiona los turnos.
-        """
         clear_screen()
         print("--- BIENVENIDO AL POMODORO TIMER ---")
         
         try:
-            self.config.work_min = int(input("Minutos de trabajo: ") or 25)
-            self.config.short_break_min = int(input("Minutos de descanso corto: ") or 5)
+            # Validación activa de rangos razonables
+            w = int(input("Minutos de trabajo (1-120): ") or 25)
+            s = int(input("Minutos de descanso corto (1-30): ") or 5)
+            
+            if self.config.validate_positive(w) and self.config.validate_positive(s):
+                self.config.work_min = w
+                self.config.short_break_min = s
+            else:
+                print("Los valores deben ser positivos. Usando valores por defecto.")
+                time.sleep(1)
         except ValueError:
             print("Entrada no válida, usando valores por defecto.")
             time.sleep(1)
