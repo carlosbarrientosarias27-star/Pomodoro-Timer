@@ -31,7 +31,8 @@ Inicio de una sesión estándar
 Python
 from logic import PomodoroLogic
 
-- Instanciar la lógica con 25 min de trabajo y 5 min de descanso
+- Instanciar la lógica con 25 min de trabajo y 5 min de descanso:
+
 timer = PomodoroLogic(work_time=25, break_time=5)
 timer.start()
 Configuración personalizada
