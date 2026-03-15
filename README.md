@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Tabla de Contenidos
+# 📋 Tabla de Contenidos
 
 - [Pomodoro Timer](#pomodoro-timer)
   - [Descripción](#descripción)
@@ -166,7 +166,6 @@ sesion.start()
 # ⚙️ Requisitos generales
 
 - **Python** 3.14
-- Dependencias definidas en `requirements.txt` del proyecto principal
 
 ---
 
